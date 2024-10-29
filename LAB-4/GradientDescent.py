@@ -48,3 +48,19 @@ plt.xlabel('Epochs')
 plt.ylabel('Log Loss')
 plt.grid()
 plt.show()
+
+
+output:
+Epoch 0, Loss: 2.5628
+Epoch 100, Loss: 0.9861
+Epoch 200, Loss: 0.5847
+Epoch 300, Loss: 0.4729
+Epoch 400, Loss: 0.4251
+Epoch 500, Loss: 0.3972
+Epoch 600, Loss: 0.3775
+Epoch 700, Loss: 0.3620
+Epoch 800, Loss: 0.3491
+Epoch 900, Loss: 0.3379
+Final Log Loss: 0.3278
+
+
