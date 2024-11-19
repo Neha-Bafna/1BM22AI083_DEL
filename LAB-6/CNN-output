@@ -1,0 +1,43 @@
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11490434/11490434 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
+/usr/local/lib/python3.10/dist-packages/keras/src/layers/convolutional/base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 26, 26, 32)          │             320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 13, 13, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 11, 11, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_1 (MaxPooling2D)       │ (None, 5, 5, 64)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (None, 3, 3, 64)            │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten (Flatten)                    │ (None, 576)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 64)                  │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 10)                  │             650 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 93,322 (364.54 KB)
+ Trainable params: 93,322 (364.54 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/5
+938/938 ━━━━━━━━━━━━━━━━━━━━ 56s 56ms/step - accuracy: 0.8681 - loss: 0.4264 - val_accuracy: 0.9794 - val_loss: 0.0652
+Epoch 2/5
+938/938 ━━━━━━━━━━━━━━━━━━━━ 65s 69ms/step - accuracy: 0.9826 - loss: 0.0549 - val_accuracy: 0.9845 - val_loss: 0.0489
+Epoch 3/5
+938/938 ━━━━━━━━━━━━━━━━━━━━ 68s 55ms/step - accuracy: 0.9890 - loss: 0.0365 - val_accuracy: 0.9893 - val_loss: 0.0299
+Epoch 4/5
+938/938 ━━━━━━━━━━━━━━━━━━━━ 55s 59ms/step - accuracy: 0.9905 - loss: 0.0298 - val_accuracy: 0.9901 - val_loss: 0.0333
+Epoch 5/5
+938/938 ━━━━━━━━━━━━━━━━━━━━ 78s 55ms/step - accuracy: 0.9938 - loss: 0.0204 - val_accuracy: 0.9856 - val_loss: 0.0446
+
+
+313/313 ━━━━━━━━━━━━━━━━━━━━ 4s 12ms/step - accuracy: 0.9801 - loss: 0.0595
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+Test Accuracy: 98.56%
+Model saved as 'mnist_cnn_model.h5'.
