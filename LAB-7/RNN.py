@@ -42,3 +42,27 @@ history = model.fit(x_train, y_train, epochs=20, batch_size=128, validation_data
 # Evaluate the model
 loss, accuracy = model.evaluate(x_test, y_test)
 print(f'Test Accuracy: {accuracy:.4f}')
+
+
+# Plot training & validation accuracy
+plt.subplot(1, 2, 1)
+plt.plot(history.history['accuracy'], label='Train Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.title('Training and Validation Accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+
+# Plot training & validation loss
+plt.subplot(1, 2, 2)
+plt.plot(history.history['loss'], label='Train Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.title('Training and Validation Loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+
+# Show the plot
+plt.tight_layout()
+plt.show()
+
